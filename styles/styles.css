@@ -46,10 +46,60 @@ th {
 }
 
 /* More styling */
-
+/* Leib's Styling */
 pre { 
     background-color: #f4f4f4; 
     border: 1px solid #999;
     font-family: 'Courier New', Courier, monospace; 
     padding: 10px; 
     white-space: pre-wrap; /* This ensures that white spaces are preserved */ }
+
+/* Robs Styling */
+.css-motion-path
+
+.old-demo {
+    height: 330px;
+    width: 640px;
+    border: solid;
+}
+
+.old {
+    width: 50px;
+    height: 50px;
+    animation: move1 infinite 1s linear;
+}
+
+.svg-path {
+    width: 640px;
+}
+
+.motion-path-demo {
+    height: 330px;
+    width: 640px;
+    border: solid;
+}
+
+.motion-path {
+    offset-path: path("M512.1,292.7h-77.4c-7.9-15.2-25.9-45.4-58.3-45.4s-50.4,25-60.1,45.4c-19.8-50.4-51.8-110.2-90.4-110.2s-73.8,52.9-97.2,110.2C111.4,165.5,48.7,27.3-.1,27.3");
+    animation: move 1000ms infinite reverse ease-in;
+    width: 50px;
+    height: 50px;
+}
+  
+@keyframes move { 
+    0% {
+      offset-distance: 0%;
+    }
+    100% {
+      offset-distance: 100%;
+    }
+    100% {
+        transform: rotate(-1000deg);
+    }
+}
+
+@keyframes move1 {
+    100% {
+        transform: translate(100px, 100px);
+    }
+}
