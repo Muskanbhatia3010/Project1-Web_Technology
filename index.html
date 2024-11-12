@@ -1,30 +1,211 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Upcoming CSS Technologies</title>
-</head>
+    <link rel="stylesheet" href="styles/normalize-fwd.css" />
+    <link rel="stylesheet" href="styles/styles.css" />
+    <script src="scripts/scripts.js defer"></script>
+  </head>
 
-<body>
-    <header class="site-header">
-        <nav class="navigation">
-            <div>
-                <ul>
-                    <li><a href="#aboutme">Introduction</a></li>
-                    <li><a href="#projects">View Transition</a></li>
-                    <li><a href="#contact"> CSS Nesting</a></li>
-                    <li><a href="#contact">CSS Motion Path</a></li>
-                    <li><a href="#contact">Scroll Driven Animation</a></li>
-                    <li><a href="#contact">Conclusion</a></li>
-                </ul>
-            </div>
+  <body>
+    <div class="container">
+      <header class="fixed-header">
+        <h1>Upcoming CSS Technologies</h1>
+        <nav>
+          <ul class="nav-list">
+            <li><a href="#introduction">Back to Top</a></li>
+            <li><a href="#introduction">Introduction</a></li>
+            <li><a href="#view-transitions">View Transitions</a></li>
+            <li><a href="#css-nesting">CSS Nesting</a></li>
+            <li><a href="#css-motion-path">CSS Motion Path</a></li>
+            <li><a href="#scroll-driven">Scroll Driven Animation</a></li>
+            <li><a href="#conclusion">Conclusion</a></li>
+            <li><a href="#resources">Resources</a></li>
+          </ul>
         </nav>
-    </header>
-    <main>
-        
-    </main>
-</body>
+      </header>
+      <main class="scrollable-content">
+        <!-- Main content goes here -->
 
+        <h2 id="introduction">Introduction</h2>
+        <p>
+          Nulla facilisi. Proin sodales odio et nisl maximus ultrices sit amet
+          in ex. Donec tellus lacus, eleifend ornare tristique eget, placerat
+          non nunc. Donec scelerisque nibh sed turpis dignissim tempus. Aenean
+          facilisis ut nibh at interdum. Suspendisse at risus metus. Suspendisse
+          potenti. Morbi ligula lectus, dignissim et congue in, cursus vehicula
+          tortor. Donec tincidunt a mauris quis scelerisque.
+        </p>
+
+        <!-- View Transitions -->
+
+        <h2 id="view-transitions">View Transitions</h2>
+        <h3>Introduction to the View Transitions API</h3>
+        <p>
+          The View Transitions API is a powerful tool that enables developers to
+          create smooth, animated transitions between different states of a
+          website or application. It provides a simple mechanism for animating
+          changes in the Document Object Model (DOM), enhancing user experience
+          with visually appealing transitions.
+        </p>
+        <p>
+          Initially, the API was primarily used for same-document transitions in
+          single-page applications (SPAs). However, its capabilities have
+          expanded to include cross-document transitions, making it valuable for
+          multi-page applications (MPAs) as well.
+        </p>
+        <h3>Cross-Document View Transitions</h3>
+        <p>
+          Cross-document view transitions allow for seamless visual transitions
+          between different pages in an MPA. This feature, supported from Chrome
+          126 onwards, enables developers to create fluid navigation experiences
+          similar to those in SPAs, but across separate HTML documents
+        </p>
+        <h3>Implementation</h3>
+        <p>
+          1. First let's make sure all the pages that we want to seamlessly
+          transition between has this meta tag
+        </p>
+        <h4>HTML:</h4>
+        <pre>
+<code>
+  &lt;meta name="view-transition" content="same-origin"&gt;
+</code>
+</pre>
+        <p>
+          This meta tag lets the browser know to call the View Transitions API
+        </p>
+        <p>
+          2. Then let's make sure all the pages that we want to seamlessly
+          transition between opts in via CSS
+        </p>
+        <h4>CSS:</h4>
+        <pre>
+<code>
+  @view-transition {
+    navigation: auto;
+  }
+
+  ::view-transition-old(root),
+  ::view-transition-new(root) {
+      animation-duration: 1s;
+  }
+</code>
+</pre>
+        <p>
+          This CSS rule enables view transitions for cross-document, same-origin
+          navigations
+        </p>
+        <p>
+          The pseudo elements "::view-transition-old(root) and
+          ::view-transition-new(root)" Apply animations to the old and new root
+          elements during the transition.
+        </p>
+
+        <!-- CSS Nesting -->
+
+        <h2 id="css-nesting">CSS Nesting</h2>
+        <p>
+          Nulla facilisi. Proin sodales odio et nisl maximus ultrices sit amet
+          in ex. Donec tellus lacus, eleifend ornare tristique eget, placerat
+          non nunc. Donec scelerisque nibh sed turpis dignissim tempus. Aenean
+          facilisis ut nibh at interdum. Suspendisse at risus metus. Suspendisse
+          potenti. Morbi ligula lectus, dignissim et congue in, cursus vehicula
+          tortor. Donec tincidunt a mauris quis scelerisque.
+        </p>
+
+        <!-- CSS Motion Path-->
+
+        <h2 id="css-motion-path">CSS Motion Path</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque
+          sodales, massa id pharetra sollicitudin, diam lorem dignissim lacus,
+          iaculis finibus lacus lacus non dui. Aenean est elit, sollicitudin non
+          quam posuere, euismod eleifend turpis. Etiam malesuada vulputate
+          dolor. Pellentesque purus libero, molestie sit amet ligula nec,
+          hendrerit semper diam. Suspendisse vitae elit lacinia, sagittis justo
+          vitae, ultrices massa. Aliquam ultricies dapibus neque vitae sagittis.
+          Sed auctor est eu felis tristique bibendum. Praesent bibendum dolor a
+          commodo feugiat. Donec sit amet enim est. Praesent vitae odio
+          suscipit, porta arcu sed, egestas enim. Cras suscipit eros libero,
+          vitae dictum ligula viverra sit amet. Praesent in justo eros. Sed
+          ultrices pulvinar vehicula. Duis ultrices ac sem et imperdiet.
+          Maecenas maximus a urna sit amet egestas.
+        </p>
+
+        <!-- Scroll Driven Animation -->
+
+        <h2 id="scroll-driven">Scroll Driven Animation</h2>
+        <p>THIS IS IANS PART! YAY</p>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque
+          sodales, massa id pharetra sollicitudin, diam lorem dignissim lacus,
+          iaculis finibus lacus lacus non dui. Aenean est elit, sollicitudin non
+          quam posuere, euismod eleifend turpis. Etiam malesuada vulputate
+          dolor. Pellentesque purus libero, molestie sit amet ligula nec,
+          hendrerit semper diam. Suspendisse vitae elit lacinia, sagittis justo
+          vitae, ultrices massa. Aliquam ultricies dapibus neque vitae sagittis.
+          Sed auctor est eu felis tristique bibendum. Praesent bibendum dolor a
+          commodo feugiat. Donec sit amet enim est. Praesent vitae odio
+          suscipit, porta arcu sed, egestas enim. Cras suscipit eros libero,
+          vitae dictum ligula viverra sit amet. Praesent in justo eros. Sed
+          ultrices pulvinar vehicula. Duis ultrices ac sem et imperdiet.
+          Maecenas maximus a urna sit amet egestas.
+        </p>
+
+        <!-- Conclusion -->
+
+        <h2 id="conclusion">Conclusion</h2>
+        <p>
+          Nulla facilisi. Proin sodales odio et nisl maximus ultrices sit amet
+          in ex. Donec tellus lacus, eleifend ornare tristique eget, placerat
+          non nunc. Donec scelerisque nibh sed turpis dignissim tempus. Aenean
+          facilisis ut nibh at interdum. Suspendisse at risus metus. Suspendisse
+          potenti. Morbi ligula lectus, dignissim et congue in, cursus vehicula
+          tortor. Donec tincidunt a mauris quis scelerisque.
+        </p>
+
+        <!-- Resources -->
+
+        <h2 id="resources">Resources</h2>
+
+        <table>
+          <tr>
+            <th>Resource</th>
+            <th>Author</th>
+            <th>Date</th>
+            <th>Link</th>
+          </tr>
+          <tr>
+            <td>Title of Resource</td>
+            <td>Author Name</td>
+            <td>Date of Publication</td>
+            <td><a href="URL">Link</a></td>
+          </tr>
+          <tr>
+            <td>Example Resource</td>
+            <td>Placeholder Author</td>
+            <td>Random Date</td>
+            <td><a href="URL">Link</a></td>
+          </tr>
+          <tr>
+            <td>Example Resource</td>
+            <td>Placeholder Author</td>
+            <td>Random Date</td>
+            <td><a href="URL">Link</a></td>
+          </tr>
+          <tr>
+            <td>Example Resource</td>
+            <td>Placeholder Author</td>
+            <td>Random Date</td>
+            <td><a href="URL">Link</a></td>
+          </tr>
+
+          <!-- Repeat <tr> blocks for each resource -->
+        </table>
+      </main>
+    </div>
+  </body>
 </html>
