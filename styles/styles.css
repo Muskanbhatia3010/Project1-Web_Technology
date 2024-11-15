@@ -54,6 +54,7 @@ pre {
     padding: 10px; 
     white-space: pre-wrap; /* This ensures that white spaces are preserved */ }
 
+<<<<<<< HEAD
     
 /* Robin's Styling */
 
@@ -61,6 +62,9 @@ pre {
 /* ------------------------------ */
 
 /* old demo border */
+=======
+/* Robs Styling */
+>>>>>>> 8ef77b933315b786b2b5807c366fa673c784f4b0
 .old-demo {
     height: 330px;
     width: 640px;
