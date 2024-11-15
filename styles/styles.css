@@ -54,38 +54,52 @@ pre {
     padding: 10px; 
     white-space: pre-wrap; /* This ensures that white spaces are preserved */ }
 
-/* Robs Styling */
-.css-motion-path
+    
+/* Robin's Styling */
 
+/* demo of old CSS path animation */
+/* ------------------------------ */
+
+/* old demo border */
 .old-demo {
     height: 330px;
     width: 640px;
     border: solid;
 }
 
+/* old demo div container and animation for ball.svg */
 .old {
     width: 50px;
     height: 50px;
-    animation: move1 infinite 1s linear;
+    animation: old-move linear infinite running;
 }
 
-.svg-path {
-    width: 640px;
+@keyframes old-move {
+    20% { transform: translate(200px, 60px); }
+    40% { transform: translate(300px, -60px); }
+    60% { transform: translate(400px, 60px); }
+    80% { transform: translate(500px, -60px); }
+    100% { transform: translate(600px, 60px); }
 }
 
+/* demo of new CSS path animation */
+/* ------------------------------ */
+
+/* path demo border */
 .motion-path-demo {
     height: 330px;
     width: 640px;
     border: solid;
 }
 
+/* container and animation for ball.svg */
 .motion-path {
-    offset-path: path("M512.1,292.7h-77.4c-7.9-15.2-25.9-45.4-58.3-45.4s-50.4,25-60.1,45.4c-19.8-50.4-51.8-110.2-90.4-110.2s-73.8,52.9-97.2,110.2C111.4,165.5,48.7,27.3-.1,27.3");
-    animation: move 1000ms infinite reverse ease-in;
     width: 50px;
     height: 50px;
+    offset-path: path("M512.1,292.7h-77.4c-7.9-15.2-25.9-45.4-58.3-45.4s-50.4,25-60.1,45.4c-19.8-50.4-51.8-110.2-90.4-110.2s-73.8,52.9-97.2,110.2C111.4,165.5,48.7,27.3-.1,27.3");
+    animation: move 1000ms infinite reverse ease-in;
 }
-  
+
 @keyframes move { 
     0% {
       offset-distance: 0%;
@@ -95,11 +109,5 @@ pre {
     }
     100% {
         transform: rotate(-1000deg);
-    }
-}
-
-@keyframes move1 {
-    100% {
-        transform: translate(100px, 100px);
     }
 }
