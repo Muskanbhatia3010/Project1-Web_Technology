@@ -20,13 +20,42 @@ body, html {
     padding: 1rem;
     box-sizing: border-box;
 }
-  
+
+.fixed-header ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+a:link, a:visited, a:active {
+    color: #fff;
+    text-decoration: none;
+}
+
+a:hover {
+    color:darkturquoise;
+}
+
 .scrollable-content {
     margin-left: 250px; 
     padding: 1rem;
     width: calc(100% - 250px); 
     overflow-y: auto; /* Enable vertical scrolling */
     box-sizing: border-box;
+    background-color: lightgray;
+}
+
+/* Font styling */
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Georgia', serif;
+}
+
+p {
+    font-family: 'Times New Roman', Times, serif;
 }
   
 /* Table styling */
@@ -48,7 +77,8 @@ th {
 /* More styling */
 /* Leib's Styling */
 pre { 
-    background-color: #f4f4f4; 
+    background-color: #3a3a3a; 
+    color: #fff;
     border: 1px solid #999;
     font-family: 'Courier New', Courier, monospace; 
     padding: 10px; 
