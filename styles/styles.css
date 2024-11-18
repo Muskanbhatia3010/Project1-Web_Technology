@@ -71,24 +71,31 @@ pre {
 .old {
     width: 50px;
     height: 50px;
-    animation: old-move linear infinite running;
+    animation: linear infinite;
 }
 
 @keyframes old-move {
     20% { transform: translate(200px, 60px); }
     40% { transform: translate(300px, -60px); }
-    60% { transform: translate(400px, 60px); }
+    60% { transform: translate(400px, 40px); }
     80% { transform: translate(500px, -60px); }
-    100% { transform: translate(600px, 60px); }
+    100% { transform: translate(600px, 20px); }
+}
+
+.path-box {
+    border: solid;
 }
 
 /* demo of new CSS path animation */
 /* ------------------------------ */
 
+.motion-path-section {
+    width: 640px;
+}
+
 /* path demo border */
 .motion-path-demo {
     height: 330px;
-    width: 640px;
     border: solid;
 }
 
@@ -96,8 +103,9 @@ pre {
 .motion-path {
     width: 50px;
     height: 50px;
-    offset-path: path("M512.1,292.7h-77.4c-7.9-15.2-25.9-45.4-58.3-45.4s-50.4,25-60.1,45.4c-19.8-50.4-51.8-110.2-90.4-110.2s-73.8,52.9-97.2,110.2C111.4,165.5,48.7,27.3-.1,27.3");
-    animation: move 1000ms infinite reverse ease-in;
+    offset-path: path("M0,46c77.6,0,127.1,180.4,140.2,240.5,13.7-56.9,44.6-123.8,86.4-123.8s66.3,64.5,84.8,126c13.8-28.8,32.6-58.3,58.5-58.3s43.6,28.8,57.6,59.8c69-.7,17.6,0,84.5-.7");
+    animation: move 1000ms infinite ease-out;
+    offset-anchor: auto
 }
 
 @keyframes move { 
@@ -108,6 +116,6 @@ pre {
       offset-distance: 100%;
     }
     100% {
-        transform: rotate(-1000deg);
-    }
+        transform: rotate(1400deg);
+    } 
 }
