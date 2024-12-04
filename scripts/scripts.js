@@ -1,7 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
     const oldEditor = document.getElementById('css-editor-old');
     const motionPathEditor = document.getElementById('css-editor-motion-path');
-
     // Function to handle CSS injection for each editor
     function updateStyles(editor, styleId) {
         let styleTag = document.getElementById(styleId);

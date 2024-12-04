@@ -1,29 +1,28 @@
 /* Formatting */
-
-body,
-html {
-    margin: 0;
-    height: 100%;
-    display: flex;
-}
-
 .container {
-    display: flex;
-    height: 100vh;
+    display: block;
 }
-
 .fixed-header {
-    position: fixed;
-    width: 250px;
-    height: 100vh;
+    position: static;
+    width: 100%;
     background-color: #333;
     color: #fff;
-    padding: 1rem;
+    padding: 0.5rem;
     box-sizing: border-box;
 }
+
 .fixed-header ul {
     list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     padding: 0;
+}
+.scrollable-content {
+    padding: 1rem;
+    width: auto;
+    overflow-y: auto;
+    background-color: lightgray;
 }
 
 a:link, a:visited, a:active {
@@ -34,13 +33,9 @@ a:link, a:visited, a:active {
 a:hover {
     color:darkturquoise;
 }
-.scrollable-content {
-    margin-left: 250px;
-    padding: 1rem;
-    width: calc(100% - 250px);
-    overflow-y: auto;
-    box-sizing: border-box;
-    background-color: lightgray;
+img {
+    width: 100%;
+    height: auto;
 }
 
 /* Font styling */
@@ -56,11 +51,12 @@ h1, h2, h3, h4, h5, h6 {
 p {
     font-family: 'Times New Roman', Times, serif;
 }
+
   
 /* Table styling */
   
 table { 
-    width: 100%; 
+    /* width: 70%;  */
     border-collapse: collapse; 
 } 
   
@@ -75,26 +71,47 @@ th {
 
 /* More styling */
 /* Leib's Styling */
-pre { 
-    background-color: #3a3a3a; 
+pre{
     color: #fff;
     border: 1px solid #999;
     font-family: 'Courier New', Courier, monospace; 
     padding: 10px; 
-    white-space: pre-wrap; /* This ensures that white spaces are preserved */ }
+    white-space: pre-wrap; /* This ensures that white spaces are preserved */ 
+    overflow-x: auto;
+    word-wrap: break-word;
+    background-color: #3a3a3a;
+}
+code{
+    display: block;
+    white-space: pre; 
+}
+.Nestingcode { 
+    color: #fff;
+    border: 1px solid #999;
+    font-family: 'Courier New', Courier, monospace; 
+    padding: 12px;
+    border-radius: 8px;
+    background-color: #3a3a3a;
+    line-height: 1.5;
+}
+@media(min-width:50em){
+    .Nestingcode{
+    white-space: pre-wrap; /* This ensures that white spaces are preserved */ 
+    overflow-x: auto;
+    word-wrap: break-word;
+    }
+}
 
+/* Muskan's Styling */
+ol li{
+    font-family: 'Times New Roman', Times, serif;
+}
+ol li span {
+    display: inline;
+  }
 /* Robs Styling */
 
-.editor, .preview {
-    flex: 1;
-    padding: 20px;
-}
-
-.editor {
-    background-color: #f0f0f0;
-}
-
-#css-editor {
+#css-editor-old,#css-editor-motion-path {
     width: 100%;
     height: 150px;
     font-family: monospace;
@@ -105,17 +122,14 @@ pre {
     resize: none;
 }
 
-.preview {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
+
 
 .old-demo, .motion-path-demo {
     height: 330px;
-    width: 640px;
+    /* width: 640px; */
     border: 1px solid black;
     display: flex;
+    overflow: hidden;
 }
 
 .old, .motion-path {
@@ -125,7 +139,7 @@ pre {
 
 
 .svg-path {
-    width: 640px;
+    /* width: 640px; */
 }
 
 /* Ian's Styling start */
@@ -133,7 +147,7 @@ pre {
 /* Example of animation-timeline scroll() */
 .scroll-container-1 {
     margin: 0 auto;
-    width: 800px;
+    /* width: 800px; */
     height: 300px;
     overflow-y: scroll;
     position: relative;
@@ -171,7 +185,7 @@ pre {
 .scroll-driven {
     display: block;
     margin: 0 auto;
-    width: 800px;
+    /* width: 800px; */
     height: 500px;
     overflow-y: scroll;
     background-color: white;
@@ -276,7 +290,7 @@ pre {
 }
 
 .range {
-    width: 800px;
+    /* width: 800px; */
     height: 300px;
     --surface: hsl(200 10% 10%);
     --text: hsl(200 5% 80%);
@@ -306,3 +320,33 @@ pre {
 }
 
 /* Ian's styling End */
+@media (min-width: 768px) {
+    .container {
+        display: flex;
+        height: 100vh;
+    }
+
+    .fixed-header {
+        position: fixed;
+        width: 250px;
+        height: 100vh;
+        padding: 1rem;
+    }
+
+    .fixed-header ul {
+        flex-direction: column;
+        padding: 1rem 0;
+    }
+
+    .scrollable-content {
+        margin-left: 250px;
+        padding: 1rem;
+        width: calc(100% - 250px);
+        overflow-y: auto;
+        background-color: lightgray;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        font-size: normal;
+    }
+}
