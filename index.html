@@ -12,17 +12,18 @@
 
 <body>
     <header class="fixed-header">
-      <h1>Upcoming CSS Technologies</h1>
-      <nav>
+      <button id="toggle-menu">Menu</button>
+      <nav id="navigation">
+        <h1 class="header-title">Upcoming CSS Technologies</h1>
         <ul class="nav-list">
-          <li><a href="#introduction">Introduction</a></li>
-          <li><a href="#view-transitions">View Transitions</a></li>
-          <li><a href="#css-nesting">CSS Nesting</a></li>
-          <li><a href="#css-motion-path">CSS Motion Path</a></li>
-          <li><a href="#scroll-driven-animation">Scroll Driven Animation</a></li>
-          <li><a href="#conclusion">Conclusion</a></li>
-          <li><a href="#resources">Resources</a></li>
-          <li><a href="#introduction">Back to Top</a></li>
+          <li class="nav-item"><a href="#introduction">Introduction</a></li>
+          <li class="nav-item"><a href="#view-transitions">View Transitions</a></li>
+          <li class="nav-item"><a href="#css-nesting">CSS Nesting</a></li>
+          <li class="nav-item"><a href="#css-motion-path">CSS Motion Path</a></li>
+          <li class="nav-item"><a href="#scroll-driven-animation">Scroll Driven Animation</a></li>
+          <li class="nav-item"><a href="#conclusion">Conclusion</a></li>
+          <li class="nav-item"><a href="#resources">Resources</a></li>
+          <li class="nav-item"><a href="#introduction">Back to Top</a></li>
         </ul>
       </nav>
     </header>
@@ -69,6 +70,10 @@
           126 onwards, enables developers to create fluid navigation experiences
           similar to those in SPAs, but across separate HTML documents
         </p>
+        <h4>Before:</h4>
+        <embed src="https://laust.ca/projects/country/" style="width:1200px; height: 700px;">
+        <h4>After:</h4>
+        <embed src="https://laust.ca/projects/country-view/" style="width:1200px; height: 700px;">
         <h3>Implementation</h3>
         <p>
           1. First let's make sure all the pages that we want to seamlessly
