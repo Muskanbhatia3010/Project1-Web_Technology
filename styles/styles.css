@@ -360,6 +360,8 @@ ol li span {
 }
 
 #toggle-menu {
+  position: fixed;
+  right: 1rem;
   padding: 1rem;
   cursor: pointer;
   background-color: #3a3a3a;
@@ -374,9 +376,9 @@ ol li span {
     height: 100vh;
   }
 
-  #toggle-menu {
+  /* #toggle-menu {
     display: none;
-  }
+  } */
 
   #navigation {
     display: block;
