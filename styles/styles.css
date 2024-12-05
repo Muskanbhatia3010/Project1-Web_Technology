@@ -70,7 +70,7 @@ p {
 /* Table styling */
 
 table {
-  /* width: 70%;  */
+  width: 70%; 
   border-collapse: collapse;
 }
 
@@ -97,26 +97,6 @@ pre {
   word-wrap: break-word;
   background-color: #3a3a3a;
 }
-code {
-  display: block;
-  white-space: pre;
-}
-.Nestingcode {
-  color: #fff;
-  border: 1px solid #999;
-  font-family: "Courier New", Courier, monospace;
-  padding: 12px;
-  border-radius: 8px;
-  background-color: #3a3a3a;
-  line-height: 1.5;
-}
-@media (min-width: 50em) {
-  .Nestingcode {
-    white-space: pre-wrap; /* This ensures that white spaces are preserved */
-    overflow-x: auto;
-    word-wrap: break-word;
-  }
-}
 
 /* Muskan's Styling */
 ol li {
@@ -124,11 +104,74 @@ ol li {
 }
 ol li span {
   display: inline;
-}
+}  
+  
+  .toggle-button {
+    display: block;
+    width: 100%;
+    max-width: 200px;
+    padding: 10px;
+    margin: 10px auto;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .toggle-button:hover {
+    background-color: #0056b3;
+  }
+  #code-preview-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Spacing between code and preview */
+    margin-top: 20px;
+  }
+  
+  #css-code-block {
+    flex: 1;
+    max-width: 100%;
+    overflow-x: auto; /* Enable horizontal scrolling for long code */
+    background-color: #2b2b2b;
+    color: #f8f8f2;
+    padding: 1rem;
+    border-radius: 4px;
+    font-family: 'Courier New', Courier, monospace;
+    line-height: 1.5;
+  }
+  
+  #preview-area {
+    flex: 1;
+    max-width: 100%;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    align-self: center;
+  }
+  
+  @media (min-width: 768px) {
+    .toggle-button {
+      max-width: 150px;
+    }
+  
+    #code-preview-container {
+        flex-direction: row; /* Arrange side by side */
+        align-items: flex-start; /* Align content at the top */
+        gap: 40px;
+      }
+    
+      #css-code-block,
+      #preview-area {
+        max-width: 50%; /* Each takes half the container width */
+      }
+  }
 /* Robs Styling */
 
 #css-editor-old,
-#css-editor-motion-path {
+#css-editor-motion-path,
+#css-editor-Nesting,#css-editor-scroll,#css-editor-animation-range {
   width: 100%;
   height: 150px;
   font-family: monospace;
@@ -142,7 +185,7 @@ ol li span {
 .old-demo,
 .motion-path-demo {
   height: 330px;
-  /* width: 640px; */
+  width: 640px;
   border: 1px solid black;
   display: flex;
   overflow: hidden;
@@ -155,7 +198,7 @@ ol li span {
 }
 
 .svg-path {
-  /* width: 640px; */
+  width: 640px;
 }
 
 /* Ian's Styling start */
@@ -163,7 +206,7 @@ ol li span {
 /* Example of animation-timeline scroll() */
 .scroll-container-1 {
   margin: 0 auto;
-  /* width: 800px; */
+  width: 800px;
   height: 300px;
   overflow-y: scroll;
   position: relative;
@@ -180,14 +223,14 @@ ol li span {
   margin-top: 100px;
   position: absolute;
   bottom: 0;
-  animation-name: rotateAnimation;
-  animation-duration: 1ms;
+  /* animation-name: rotateAnimation;
+  animation-duration: 1ms; */
   /* Firefox requires this to apply the animation */
   animation-direction: alternate;
   animation-timeline: scroll(block nearest);
 }
 
-@keyframes rotateAnimation {
+/* @keyframes rotateAnimation {
   from {
     transform: rotate(0deg);
   }
@@ -195,108 +238,9 @@ ol li span {
   to {
     transform: rotate(360deg);
   }
-}
-
-/* Animation-timeline view() */
-.scroll-driven {
-  display: block;
-  margin: 0 auto;
-  /* width: 800px; */
-  height: 500px;
-  overflow-y: scroll;
-  background-color: white;
-  border: 1px solid #000;
-  position: relative;
-}
-
-.subject {
-  width: 300px;
-  height: 200px;
-  background-color: deeppink;
-}
-
-.scroll-content {
-  width: 75%;
-  max-width: 800px;
-  margin: 0 auto;
-}
-
-.scroll-driven p {
-  font-size: 1.5rem;
-  line-height: 1.8;
-}
-
-.subject-container {
-  border: 2px dashed black;
-  width: 300px;
-  margin: 0 auto;
-  position: relative;
-}
-
-.overlay {
-  position: absolute;
-  width: 100%;
-  background-color: #f5deb3aa;
-  display: flex;
-  font-size: 1.2rem;
-  font-weight: bold;
-  color: red;
-  top: 0;
-  left: 0;
-  justify-content: flex-start;
-}
-
-.top {
-  top: 0rem;
-  height: 244px;
-  align-items: end;
-}
-
-.bottom {
-  top: 455px;
-  height: 50px;
-  padding-left: 5rem;
-}
-
-.animation {
-  animation-timeline: view(block 50% 10%);
-  animation-name: grow;
-  animation-fill-mode: both;
-  animation-duration: 1ms;
-  /* Firefox requires this to apply the animation */
-  animation-timing-function: linear;
-}
-
-@keyframes grow {
-  from {
-    transform: scaleX(0);
-  }
-
-  to {
-    transform: scaleX(1);
-  }
-}
+} */
 
 /* Example of animation-renge */
-@keyframes header {
-  from {
-    backdrop-filter: blur(0);
-    background: transparent;
-  }
-
-  to {
-    backdrop-filter: blur(8px);
-    background: rgba(83, 117, 173, 0.75);
-  }
-}
-
-.scroll-nav,
-.scroll-nav > h2 {
-  animation: header linear forwards;
-  animation-timeline: scroll();
-  animation-range: 0 80px;
-}
-
 .scroll-nav {
   position: sticky;
   top: 0;
@@ -306,7 +250,7 @@ ol li span {
 }
 
 .range {
-  /* width: 800px; */
+  width: 800px;
   height: 300px;
   --surface: hsl(200 10% 10%);
   --text: hsl(200 5% 80%);
@@ -354,11 +298,13 @@ ol li span {
   align-items: center;
   padding: 0;
 }
-
 #navigation {
   display: none;
 }
 
+#navigation.menu-open {
+  display: block;
+}
 #toggle-menu {
   position: fixed;
   right: 1rem;
@@ -375,14 +321,12 @@ ol li span {
     display: flex;
     height: 100vh;
   }
-
-  /* #toggle-menu {
-    display: none;
-  } */
-
   #navigation {
-    display: block;
+    display: block; 
   }
+  #toggle-menu {
+    display: none;
+  } 
 
   .fixed-header {
     position: fixed;
@@ -403,14 +347,5 @@ ol li span {
     overflow-y: auto;
     background-color: lightgray;
     max-width: 1200px;
-  }
-
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    font-size: normal;
   }
 }
