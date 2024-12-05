@@ -307,6 +307,8 @@ ol li span {
   display: block;
 }
 #toggle-menu {
+  position: fixed;
+  right: 1rem;
   padding: 1rem;
   cursor: pointer;
   background-color: #3a3a3a;
@@ -325,7 +327,7 @@ ol li span {
   }
   #toggle-menu {
     display: none;
-  }
+  } 
 
   .fixed-header {
     position: fixed;
