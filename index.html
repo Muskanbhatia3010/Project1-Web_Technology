@@ -180,7 +180,7 @@
       <p>Previously, only simple, linear movements were possible in CSS.</p>
       <h3>Try the following code in the editor below</h3>
 <div class = "code-editor-container">
-        <pre id="code-display">
+        <pre class="code-display">
     <code>
   .old {
     width: 50px;
@@ -214,30 +214,32 @@
         <p>... is pasted into the class's <b>offset-path</b> property.</p>
       </div>
         <h3>Now try the following code in the editor below</h3>
-        <pre>
-<code>
-.motion-path {
-  offset-path: path("M512.1,292.7h-77.4c-7.9-15.2-25.9-45.4-58.3-45.4s-50.4,25-60.1,45.4c-19.8-50.4-51.8-110.2-90.4-110.2s-73.8,52.9-97.2,110.2C111.4,165.5,48.7,27.3-.1,27.3");
-  animation: move 1000ms infinite reverse ease-in;
-  width: 50px;
-  height: 50px;
-}
-@keyframes move { 
-  0% {
-    offset-distance: 0%;
+<div class="code-editor-container">
+  <pre class = "code-display">
+  <code>
+  .motion-path {
+    offset-path: path("M512.1,292.7h-77.4c-7.9-15.2-25.9-45.4-58.3-45.4s-50.4,25-60.1,45.4c-19.8-50.4-51.8-110.2-90.4-110.2s-73.8,52.9-97.2,110.2C111.4,165.5,48.7,27.3-.1,27.3");
+    animation: move 1000ms infinite reverse ease-in;
+    width: 50px;
+    height: 50px;
   }
-  100% {
-    offset-distance: 100%;
+  @keyframes move { 
+    0% {
+      offset-distance: 0%;
+    }
+    100% {
+      offset-distance: 100%;
+    }
+    100% {
+      transform: rotate(-1000deg);
+    }
   }
-  100% {
-    transform: rotate(-1000deg);
-  }
-}
-    </code>
-          </pre>
-      <section class="css-editor-section">
-        <textarea id="css-editor-motion-path" placeholder="Type CSS here for the motion path animation..."></textarea>
-      </section>
+      </code>
+    </pre>
+        <section class="css-editor-section">
+          <textarea id="css-editor-motion-path" placeholder="Type CSS here for the motion path animation..."></textarea>
+        </section>
+</div>
 
       <!-- Motion Path Animation Preview -->
       <div class="motion-path-demo">
@@ -288,56 +290,60 @@
       </ol>
       <h3>Using the Scroll-driven animation</h3>
       <h4>Add the following code to see how Scroll() works</h4>
-        <pre>
-<code>
-#bear-image {
-  animation-name: rotateAnimation;
-  animation-timeline: scroll(block nearest);
-}
-@keyframes rotateAnimation {
-from {
-  transform: rotate(0deg);
-}
-to {
-  transform: rotate(360deg);
-   }
-}
-    </code>
-  </pre>
+<div class="code-editor-container">
+          <pre class="code-display">
+  <code>
+  #bear-image {
+    animation-name: rotateAnimation;
+    animation-timeline: scroll(block nearest);
+  }
+  @keyframes rotateAnimation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+     }
+  }
+      </code>
+    </pre>
       <div class="css-editor-section">
         <textarea id="css-editor-scroll" placeholder="Type CSS here for the old animation..."></textarea>
       </div>
+    </div>
       <div class="scroll-container-1">
         <img id="bear-image" src="images/mole.png" alt="bear">
         <div id="stretcher"></div>
       </div>
       <h3>Using the Animation Range</h3>
       <h4>Add the following CSS code for Animation range</h4>
-<pre>
-<code>
-@keyframes header {
-  from {
-  backdrop-filter: blur(0);
-  background: transparent;
+<div class="code-editor-container">
+  <pre class="code-display">
+  <code>
+  @keyframes header {
+    from {
+    backdrop-filter: blur(0);
+    background: transparent;
+    }
+    
+    to {
+    backdrop-filter: blur(8px);
+    background: rgba(83, 117, 173, 0.75);
+    }
   }
-  
-  to {
-  backdrop-filter: blur(8px);
-  background: rgba(83, 117, 173, 0.75);
-  }
-}
-  
-  .scroll-nav,
-  .scroll-nav > h2 {
-    animation: header linear forwards;
-    animation-timeline: scroll();
-    animation-range: 0 80px;
-  }
-</code>
-</pre>
-      <section class="css-editor-section">
-        <textarea id="css-editor-animation-range" placeholder="Type CSS here for animation range..."></textarea>
-      </section>
+    
+    .scroll-nav,
+    .scroll-nav > h2 {
+      animation: header linear forwards;
+      animation-timeline: scroll();
+      animation-range: 0 80px;
+    }
+  </code>
+  </pre>
+        <section class="css-editor-section">
+          <textarea id="css-editor-animation-range" placeholder="Type CSS here for animation range..."></textarea>
+        </section>
+</div>
       <div class="range">
         <div class="scroll-container-2">
           <nav class="scroll-nav">
@@ -403,23 +409,78 @@ to {
           <td><a href="URL">Link</a></td>
         </tr>
         <tr>
-          <td>Example Resource</td>
-          <td>Placeholder Author</td>
-          <td>Random Date</td>
-          <td><a href="URL">Link</a></td>
+          <td>Animating View Transitions</td>
+          <td>Dom Christie</td>
+          <td>2024</td>
+          <td><a href="https://www.patterns.dev/vanilla/view-transitions/">Link</a></td>
         </tr>
         <tr>
-          <td>Example Resource</td>
-          <td>Placeholder Author</td>
-          <td>Random Date</td>
-          <td><a href="URL">Link</a></td>
+          <td>View Transitions API</td>
+          <td>Adrian Bece</td>
+          <td>Dec 2023</td>
+          <td><a href="https://www.smashingmagazine.com/2023/12/view-transitions-api-ui-animations-part1/">Link</a></td>
         </tr>
         <tr>
-          <td>Example Resource</td>
-          <td>Placeholder Author</td>
-          <td>Random Date</td>
-          <td><a href="URL">Link</a></td>
+          <td>CSS View Transitions</td>
+          <td>Robin Pietersen</td>
+          <td>August 2024</td>
+          <td><a href="https://www.fooevents.com/css-view-transitions/">Link</a></td>
         </tr>
+        <tr>
+          <td>Multi-Page Apps</td>
+          <td>Dave Rupert</td>
+          <td>May 2023</td>
+          <td><a href="https://daverupert.com/2023/05/getting-started-view-transitions/">Link</a></td>
+        </tr>
+        <tr>
+          <td>@view-transition</td>
+          <td>Mozilla</td>
+          <td>Nov 2024</td>
+          <td><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/@view-transition">Link</a></td>
+        </tr>
+        <tr>
+          <td>Intro to View Transitions</td>
+          <td>Craig Buckler</td>
+          <td>June 2023</td>
+          <td><a href="https://www.sitepoint.com/view-transitions-api-introduction/">Link</a></td>
+        </tr>
+        <tr>
+          <td>Smooth Transitions</td>
+          <td>Bramus - Chrome</td>
+          <td>April 2024</td>
+          <td><a href="https://developer.chrome.com/docs/web-platform/view-transitions">Link</a></td>
+        </tr>
+        <tr>
+          <td>CSS Scroll-Driven-Animation</td>
+          <td>Mark Skelton</td>
+          <td>July/30, 2024</td>
+          <td><a href="https://mskelton.dev/blog/css-scroll-animations">Link</a></td>
+        </tr>
+        <tr>
+          <td>CODEDROPS</td>
+          <td>Adam Argyle</td>
+          <td>Jan/17, 2024</td>
+          <td><a href="https://tympanus.net/codrops/2024/01/17/a-practical-introduction-to-scroll-driven-animations-with-css-scroll-and-view/">Link</a></td>
+        </tr>
+        <tr>
+          <tr>
+            <td>MDN Web Docs</td>
+            <td>CSS motion path</td>
+            <td>NA</td>
+            <td><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_motion_path">Link</a></td>
+          </tr>
+          <tr>
+            <td>Medium</td>
+            <td>Motion Path — Magical Path Animation</td>
+            <td>July 3, 2022</td>
+            <td><a href="https://medium.com/@rocchokcoco/motion-path-magical-path-animation-6f9f36c621b3">Link</a></td>
+          </tr>
+          <tr>
+            <td>W3 Schools</td>
+            <td>CSS offset Property</td>
+            <td>NA</td>
+            <td><a href="https://www.w3schools.com/cssref/css_pr_offset.php">Link</a></td>
+          </tr>
 
         <!-- Repeat <tr> blocks for each resource -->
       </table>
