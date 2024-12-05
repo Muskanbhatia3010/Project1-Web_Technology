@@ -4,6 +4,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const toggleNestingButton = document.getElementById("toggle-nesting");
   const cssCodeBlock = document.getElementById("css-code-block");
   const scrollEditor = document.getElementById("css-editor-scroll");
+  const animationRangeEditor = document.getElementById("css-editor-animation-range");
 
   let isShowingAfter = false; 
   const beforeCSS = `
@@ -124,19 +125,17 @@ document.addEventListener("DOMContentLoaded", () => {
       scrollEditor?.addEventListener("input", () => {
         updateStyles(scrollEditor, "dynamic-styles-scroll");
       });
+      animationRangeEditor?.addEventListener("input", () => {
+        updateStyles(animationRangeEditor, "dynamic-styles-animation-range");
+      });
     });
     
 
 // Hamburger menu
 
 const toggleMenuButton = document.getElementById("toggle-menu");
-let isMenuOpen = false;
+const navigationMenu = document.getElementById("navigation");
 
 toggleMenuButton.addEventListener("click", () => {
-  isMenuOpen = !isMenuOpen;
-  if (isMenuOpen) {
-    document.getElementById("navigation").style.display = "block";
-  } else {
-    document.getElementById("navigation").style.display = "none";
-  }
+  navigationMenu.classList.toggle("menu-open");
 });

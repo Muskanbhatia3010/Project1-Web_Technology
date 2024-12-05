@@ -157,7 +157,6 @@
   </code>
 </pre>
       <h3>Before vs. After CSS Nesting</h3>
-      <button id="toggle-nesting" class="toggle-button">Show After CSS Nesting</button>
       <h3>CSS Code:</h3>
       <div id="code-preview-container">
         <pre id="css-code-block"></pre>
@@ -169,7 +168,7 @@
           </div>
         </div>
       </div>
-
+      <button id="toggle-nesting" class="toggle-button">Show After CSS Nesting</button>
     </section>
     <!-- CSS Motion Path-->
 
@@ -209,7 +208,6 @@
         <p>… and the resulting SVG path code...</p>
         <img src="images/svg-path-code.jpg" alt="svg path code">
         <p>... is pasted into the class's <b>offset-path</b> property.</p>
-        <img src="images/css-path-code.jpg" alt="css path code">
       </div>
         <h3>Now try the following code in the editor below</h3>
         <pre>
@@ -285,7 +283,7 @@
           end.</li>
       </ol>
       <h3>Using the Scroll-driven animation</h3>
-      <h4>Add the following CSS code for Scroll Animation</h4>
+      <h4>Add the following code to see how Scroll() works</h4>
         <pre>
 <code>
 #bear-image {
@@ -311,8 +309,30 @@ to {
       </div>
       <h3>Using the Animation Range</h3>
       <h4>Add the following CSS code for Animation range</h4>
+<pre>
+<code>
+@keyframes header {
+  from {
+  backdrop-filter: blur(0);
+  background: transparent;
+  }
+  
+  to {
+  backdrop-filter: blur(8px);
+  background: rgba(83, 117, 173, 0.75);
+  }
+}
+  
+  .scroll-nav,
+  .scroll-nav > h2 {
+    animation: header linear forwards;
+    animation-timeline: scroll();
+    animation-range: 0 80px;
+  }
+</code>
+</pre>
       <section class="css-editor-section">
-        <textarea id="css-editor-motion-path" placeholder="Type CSS here for the motion path animation..."></textarea>
+        <textarea id="css-editor-animation-range" placeholder="Type CSS here for animation range..."></textarea>
       </section>
       <div class="range">
         <div class="scroll-container-2">

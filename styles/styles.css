@@ -171,7 +171,7 @@ ol li span {
 
 #css-editor-old,
 #css-editor-motion-path,
-#css-editor-Nesting,#css-editor-scroll {
+#css-editor-Nesting,#css-editor-scroll,#css-editor-animation-range {
   width: 100%;
   height: 150px;
   font-family: monospace;
@@ -241,25 +241,6 @@ ol li span {
 } */
 
 /* Example of animation-renge */
-@keyframes header {
-  from {
-    backdrop-filter: blur(0);
-    background: transparent;
-  }
-
-  to {
-    backdrop-filter: blur(8px);
-    background: rgba(83, 117, 173, 0.75);
-  }
-}
-
-.scroll-nav,
-.scroll-nav > h2 {
-  animation: header linear forwards;
-  animation-timeline: scroll();
-  animation-range: 0 80px;
-}
-
 .scroll-nav {
   position: sticky;
   top: 0;
@@ -317,11 +298,13 @@ ol li span {
   align-items: center;
   padding: 0;
 }
-
 #navigation {
   display: none;
 }
 
+#navigation.menu-open {
+  display: block;
+}
 #toggle-menu {
   padding: 1rem;
   cursor: pointer;
@@ -336,13 +319,11 @@ ol li span {
     display: flex;
     height: 100vh;
   }
-
+  #navigation {
+    display: block; 
+  }
   #toggle-menu {
     display: none;
-  }
-
-  #navigation {
-    display: block;
   }
 
   .fixed-header {
