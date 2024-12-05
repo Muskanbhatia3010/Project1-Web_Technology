@@ -1,345 +1,433 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Upcoming CSS Technologies</title>
-    <link rel="stylesheet" href="styles/normalize-fwd.css" />
-    <link rel="stylesheet" href="styles/styles.css" />
-    <script src="scripts/scripts.js" defer></script>
-  </head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Upcoming CSS Technologies</title>
+  <link rel="stylesheet" href="styles/normalize-fwd.css" />
+  <link rel="stylesheet" href="styles/styles.css" />
+  <script src="scripts/scripts.js" defer></script>
+</head>
 
-  <body>
-    <div class="container">
-      <header class="fixed-header">
-        <h1>Upcoming CSS Technologies</h1>
-        <nav>
-          <ul class="nav-list">
-            <li><a href="#introduction">Back to Top</a></li>
-            <li><a href="#introduction">Introduction</a></li>
-            <li><a href="#view-transitions">View Transitions</a></li>
-            <li><a href="#css-nesting">CSS Nesting</a></li>
-            <li><a href="#css-motion-path">CSS Motion Path</a></li>
-            <li><a href="#scroll-driven">Scroll Driven Animation</a></li>
-            <li><a href="#conclusion">Conclusion</a></li>
-            <li><a href="#resources">Resources</a></li>
-          </ul>
-        </nav>
-      </header>
-      <main class="scrollable-content">
-        <!-- Main content goes here -->
-        <h2 id="introduction">Introduction</h2>
-        <p>
-          Nulla facilisi. Proin sodales odio et nisl maximus ultrices sit amet
-          in ex. Donec tellus lacus, eleifend ornare tristique eget, placerat
-          non nunc. Donec scelerisque nibh sed turpis dignissim tempus. Aenean
-          facilisis ut nibh at interdum. Suspendisse at risus metus. Suspendisse
-          potenti. Morbi ligula lectus, dignissim et congue in, cursus vehicula
-          tortor. Donec tincidunt a mauris quis scelerisque.
-        </p>
+<body>
 
-        <!-- View Transitions -->
-        <h2 id="view-transitions">View Transitions</h2>
-        <h3>Introduction to the View Transitions API</h3>
-        <p>
-          The View Transitions API is a powerful tool that enables developers to
-          create smooth, animated transitions between different states of a
-          website or application. It provides a simple mechanism for animating
-          changes in the Document Object Model (DOM), enhancing user experience
-          with visually appealing transitions.
-        </p>
-        <p>
-          Initially, the API was primarily used for same-document transitions in
-          single-page applications (SPAs). However, its capabilities have
-          expanded to include cross-document transitions, making it valuable for
-          multi-page applications (MPAs) as well.
-        </p>
-        <h3>Cross-Document View Transitions</h3>
-        <p>
-          Cross-document view transitions allow for seamless visual transitions
-          between different pages in an MPA. This feature, supported from Chrome
-          126 onwards, enables developers to create fluid navigation experiences
-          similar to those in SPAs, but across separate HTML documents
-        </p>
-        <h3>Implementation</h3>
-        <p>
-          1. First let's make sure all the pages that we want to seamlessly
-          transition between has this meta tag
-        </p>
-        <h4>HTML:</h4>
-        <pre>
-<code>
-  &lt;meta name="view-transition" content="same-origin"&gt;
-</code>
+  <header class="fixed-header">
+    <button id="toggle-menu">Menu</button>
+    <nav id="navigation">
+      <h1 class="header-title">Upcoming CSS Technologies</h1>
+      <ul class="nav-list">
+        <li class="nav-item"><a href="#introduction">Introduction</a></li>
+        <li class="nav-item"><a href="#view-transitions">View Transitions</a></li>
+        <li class="nav-item"><a href="#css-nesting">CSS Nesting</a></li>
+        <li class="nav-item"><a href="#css-motion-path">CSS Motion Path</a></li>
+        <li class="nav-item"><a href="#scroll-driven-animation">Scroll Driven Animation</a></li>
+        <li class="nav-item"><a href="#conclusion">Conclusion</a></li>
+        <li class="nav-item"><a href="#resources">Resources</a></li>
+        <li class="nav-item"><a href="#introduction">Back to Top</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main class="scrollable-content">
+    <!-- Main content goes here -->
+    <section class="Introduction">
+      <h2 id="introduction">Introduction</h2>
+      <p>
+        In the ever-evolving world of web development, CSS continues to play a pivotal role in shaping modern user
+        experiences. Over the years, CSS has grown from a basic styling language into a robust toolkit for creating
+        dynamic and visually appealing web pages. Upcoming CSS technologies, such as view transitions, motion paths,
+        and scroll-driven animations, aim to simplify workflows, improve performance, and provide developers with more
+        creative possibilities.
+      </p>
+      <p>
+        This page explores some of the most exciting advancements in CSS, demonstrating how these features empower
+        developers to craft smoother animations, more intuitive designs, and interactive content with less code. From
+        nesting styles to creating seamless page transitions, these innovations are set to redefine what's possible
+        with web design. Let’s dive in!
+      </p>
+    </section>
+
+
+    <!-- View Transitions -->
+    <section class="View-Transition">
+      <h2 id="view-transitions">View Transitions</h2>
+      <h3>Introduction to the View Transitions API</h3>
+      <p>
+        The View Transitions API is a powerful tool that enables developers to
+        create smooth, animated transitions between different states of a
+        website or application. It provides a simple mechanism for animating
+        changes in the Document Object Model (DOM), enhancing user experience
+        with visually appealing transitions.
+      </p>
+      <p>
+        Initially, the API was primarily used for same-document transitions in
+        single-page applications (SPAs). However, its capabilities have
+        expanded to include cross-document transitions, making it valuable for
+        multi-page applications (MPAs) as well.
+      </p>
+      <h3>Cross-Document View Transitions</h3>
+      <p>
+        Cross-document view transitions allow for seamless visual transitions
+        between different pages in an MPA. This feature, supported from Chrome
+        126 onwards, enables developers to create fluid navigation experiences
+        similar to those in SPAs, but across separate HTML documents
+      </p>
+      <h4>Before:</h4>
+      <embed src="https://laust.ca/projects/country/" style="width:1200px; height: 700px;">
+      <!-- need to change inline styling -->
+      <!-- Not sure if we can have h4 before h3? -->
+      <h4>After:</h4>
+      <embed src="https://laust.ca/projects/country-view/" style="width:1200px; height: 700px;">
+      <h3>Implementation</h3>
+      <p>
+        1. First let's make sure all the pages that we want to seamlessly
+        transition between has this meta tag
+      </p>
+      <h4>HTML:</h4>
+      <pre>
+  <code>
+&lt;meta name="view-transition" content="same-origin"&gt;
+  </code>
+  </pre>
+      <p>
+        This meta tag lets the browser know to call the View Transitions API
+      </p>
+      <p>
+        2. Then let's make sure all the pages that we want to seamlessly
+        transition between opts in via CSS
+      </p>
+      <h4>CSS:</h4>
+      <pre>
+  <code>
+    @view-transition {
+      navigation: auto;
+    }
+  
+    ::view-transition-old(root),
+    ::view-transition-new(root) {
+        animation-duration: 1s;
+    }
+  </code>
+  </pre>
+      <p>
+        This CSS rule enables view transitions for cross-document, same-origin
+        navigations
+      </p>
+      <p>
+        The pseudo elements "::view-transition-old(root) and
+        ::view-transition-new(root)" Apply animations to the old and new root
+        elements during the transition.
+      </p>
+    </section>
+
+    <!-- CSS Nesting -->
+
+    <section class="CSS-Nesting">
+      <h2 id="css-nesting">CSS Nesting</h2>
+      <h3>Introduction to CSS Nesting</h3>
+      <p>
+        CSS Nesting is a new feature in CSS that allows developers to write nested selectors directly within CSS
+        rules.
+        This feature brings CSS closer to the organization and readability of popular pre-processors like Sass and
+        LESS,
+        making it easier to style complex components without excessive selector repetition.
+        Before CSS Nesting, developers relied on pre-processors to structure CSS code more hierarchically. Now, native
+        CSS can handle nested rules, reducing the need for pre-processors and creating cleaner, more maintainable
+        code.
+      </p>
+      <h3>Why Use CSS Nesting?</h3>
+      <ol>
+        <li><b>Improved Readability</b>:
+          <span>CSS Nesting makes code more readable by visually grouping related styles. This allows developers to
+            see
+            the structure of the HTML within the CSS, making it easier to understand and maintain.</span>
+        </li>
+        <li><b>Reduced Redundancy</b>: <span>By nesting selectors, we can avoid repeating parent selectors, which
+            helps
+            keep CSS files cleaner and less repetitive.</span></li>
+        <li><b>Enhanced Code Organization</b>:<span>With CSS Nesting, you can structure your CSS in a way that mirrors
+            the HTML hierarchy, making it easier to work with complex components and nested elements.</span></li>
+      </ol>
+      <h3>How would you style this code using CSS?</h3>
+      <pre>
+  <code>
+   &lt;section class="card"&gt;
+    &lt;h2&gt;Card Title&lt;/h2&gt;
+    &lt;p&gt;This is a brief description inside the card.&lt;/p&gt;
+    &lt;button&gt;Read More&lt;/button&gt;
+    &lt;/section&gt;
+  </code>
 </pre>
-        <p>
-          This meta tag lets the browser know to call the View Transitions API
-        </p>
-        <p>
-          2. Then let's make sure all the pages that we want to seamlessly
-          transition between opts in via CSS
-        </p>
-        <h4>CSS:</h4>
-        <pre>
-<code>
-  @view-transition {
-    navigation: auto;
-  }
+      <h3>Before vs. After CSS Nesting</h3>
+      <h3>CSS Code:</h3>
+      <div id="code-preview-container">
+        <pre id="css-code-block"></pre>
+        <div id="preview-area">
+          <div class="card">
+            <h2>Card Title</h2>
+            <p>This is a brief description inside the card.</p>
+            <button>Read More</button>
+          </div>
+        </div>
+      </div>
+      <button id="toggle-nesting" class="toggle-button">Show After CSS Nesting</button>
+    </section>
+    <!-- CSS Motion Path-->
 
-  ::view-transition-old(root),
-  ::view-transition-new(root) {
-      animation-duration: 1s;
-  }
-</code>
-</pre>
-        <p>
-          This CSS rule enables view transitions for cross-document, same-origin
-          navigations
-        </p>
-        <p>
-          The pseudo elements "::view-transition-old(root) and
-          ::view-transition-new(root)" Apply animations to the old and new root
-          elements during the transition.
-        </p>
-
-        <!-- CSS Nesting -->
-
-        <h2 id="css-nesting">CSS Nesting</h2>
-        <h3>Introduction to CSS Nesting</h3>
-        <p>
-          CSS Nesting is a new feature in CSS that allows developers to write nested selectors directly within CSS rules. This feature brings CSS closer to the organization and readability of popular pre-processors like Sass and LESS, making it easier to style complex components without excessive selector repetition.
-          Before CSS Nesting, developers relied on pre-processors to structure CSS code more hierarchically. Now, native CSS can handle nested rules, reducing the need for pre-processors and creating cleaner, more maintainable code.
-        </p>
-        <h3>Why Use CSS Nesting?</h3>
-        <ol>
-          <li>Improved Readability</li>
-          <li>Reduced Redundancy</li>
-          <li>Enhanced Code Organization</li>
-        </ol>
-
-        <!-- CSS Motion Path-->
-
-        <h2 id="css-motion-path">CSS Motion Path</h2>
-        <p>CSS motion path is a CSS property used to animate an element along a path.</p>
-        <p>Previously, only simple, linear movements were possible in CSS.</p>
-        <section class="css-editor-section">
-          <h3>Old Animation Editor</h3>
+    <section class="CSS-Motionpath">
+      <h2 id="css-motion-path">CSS Motion Path</h2>
+      <p>CSS motion path is a CSS property used to animate an element along a path.</p>
+      <p>Previously, only simple, linear movements were possible in CSS.</p>
+      <h3>Try the following code in the editor below</h3>
+<div class = "code-editor-container">
+        <pre id="code-display">
+    <code>
+  .old {
+    width: 50px;
+    height: 50px;
+    animation: move1 infinite 1s linear;
+    }
+  @keyframes move1 {
+    100% {
+    transform: translate(100px, 100px);
+     }
+   }
+    </code>
+          </pre>
+        <div class="css-editor-section">
           <textarea id="css-editor-old" placeholder="Type CSS here for the old animation..."></textarea>
-      </section>
-
+        </div>
+</div>
       <!-- Old Animation Preview -->
       <div class="old-demo">
-          <div class="old">
-              <img src="images/ball.svg" alt="ball">
-          </div>
-      </div>
-        <div class="svg-path">
-            <p>With the <b>offset-path</b> property, a path shape is defined, while <b>offset-distance</b> animates the element along that path, and any rotation is handled by <b>offset-rotate</b>.</p>
-            <p>In our example, an SVG of the curve is created in Illustrator… </p>
-            <img src="images/path.jpg" alt="path curve">
-            <p>… and the resulting SVG path code...</p>
-            <img src="images/svg-path-code.jpg" alt="svg path code">
-            <p>... is pasted into the class's <b>offset-path</b> property.</p>
-            <img src="images/css-path-code.jpg" alt="css path code">
+        <div class="old">
+          <img src="images/ball.svg" alt="ball">
         </div>
-        <section class="css-editor-section">
-          <h3>Motion Path Animation Editor</h3>
-          <textarea id="css-editor-motion-path" placeholder="Type CSS here for the motion path animation..."></textarea>
+      </div>
+      <div class="svg-path">
+        <p>With the <b>offset-path</b> property, a path shape is defined, while <b>offset-distance</b> animates the
+          element along that path, and any rotation is handled by <b>offset-rotate</b>.</p>
+        <p>In our example, an SVG of the curve is created in Illustrator… </p>
+        <img src="images/path.jpg" alt="path curve">
+        <p>… and the resulting SVG path code...</p>
+        <img src="images/svg-path-code.jpg" alt="svg path code">
+        <p>... is pasted into the class's <b>offset-path</b> property.</p>
+      </div>
+        <h3>Now try the following code in the editor below</h3>
+        <pre>
+<code>
+.motion-path {
+  offset-path: path("M512.1,292.7h-77.4c-7.9-15.2-25.9-45.4-58.3-45.4s-50.4,25-60.1,45.4c-19.8-50.4-51.8-110.2-90.4-110.2s-73.8,52.9-97.2,110.2C111.4,165.5,48.7,27.3-.1,27.3");
+  animation: move 1000ms infinite reverse ease-in;
+  width: 50px;
+  height: 50px;
+}
+@keyframes move { 
+  0% {
+    offset-distance: 0%;
+  }
+  100% {
+    offset-distance: 100%;
+  }
+  100% {
+    transform: rotate(-1000deg);
+  }
+}
+    </code>
+          </pre>
+      <section class="css-editor-section">
+        <textarea id="css-editor-motion-path" placeholder="Type CSS here for the motion path animation..."></textarea>
       </section>
 
       <!-- Motion Path Animation Preview -->
       <div class="motion-path-demo">
-          <div class="motion-path">
-              <img src="images/ball.svg" alt="ball">
-          </div>
+        <div class="motion-path">
+          <img src="images/ball.svg" alt="ball">
+        </div>
       </div>
+    </section>
 
-              <!-- Scroll Driven Animation -->
-      <article>
-        <h2 id="css-scroll-driven-animation">Scroll-driven-animation</h2>
-        <h3>Introduction of the Scroll-driven-animation</h3>
-        <p>Scroll-based animation is a common UX pattern on the web. It links the animation to the scroll position of a
-          scroll container. In other words, as you scroll up or down, the connected animations respond directly by
-          scrubbing back and forth. Effects like parallax background images or reading indicators fall under this
-          category. Scroll-animation allows CSS animations to be directly linked to the scroll position of a webpage.
-          This
-          means that as the user scrolls, the animations can start, progress, or end based on how far they have
-          scrolled.
-        </p>
-      </article>
-      <article>
-        <h3>What are animation timelines?</h3>
-        <p>Before diving into scroll-driven animations, we first need to understand what animation timelines are.
-          Historically, the only animation timeline that existed was the document timeline which will start incrementing
-          when the page loads. As long as the page remains open, the document timeline will continue to increment. We
-          can
-          observe this by logging the document.timeline variable in our console.</p>
-        <code>
-        &lt; "document.timeline" in Javascript&gt;
-      </code>
-        <p>scroll-driven animations are based on scroll progress and not time durations, the document timeline doesn’t
-          make sense when starting to think about animating elements based on scroll position. This is why scroll-driven
-          animations introduced the animation-timeline property which allows us to target two new types of animation
-          timelines that will be used to create scroll-driven animations.</p>
-      </article>
-      <article>
-        <h3>Role of Scroll-driven animation</h3>
-        <p>The Scroll-driven animation allows for defining how animations progress according to the scroll position of a
-          specific element. As users scroll down the page, the animation can start or end based on the scroll position.
-          This allows developers to create animations that play in sync with the user's scrolling behavior.</p>
-      </article>
-      <article>
-        <h2>Introduction to new types of scroll-based timelines and property</h2>
-        <ol>
-          <li><b>Scroll progress timeline:</b> You progress this timeline by scrolling a scrollable element (scroller)
-            from top
-            to bottom (or left to right) and back again. The position in the scroll range is converted into a percentage
-            of progress — 0% at the start and 100% at the end.</li><br>
-          <li><b>View progress timeline:</b> You progress this timeline based on the change in visibility of an element
-            (known as
-            the subject) inside a scroller. The visibility of the subject inside the scroller is tracked as a percentage
-            of progress — by default, the timeline is at 0% when the subject is first visible at one edge of the
-            scroller,
-            and 100% when it reaches the opposite edge.</li><br>
-          <li><b>Animation-range:</b> The animation-range CSS shorthand property is used to set the start and end of an
-            animation's attachment range along its timeline, i.e. where along the timeline an animation will start and
-            end.</li>
-        </ol>
-      </article>
-      <article>
-        <h2>Using the Scroll-driven animation</h2>
-
-          <h3>Example of Scroll()</h3>
-          <div class="scroll-container-1">
-            <img id="bear-image" src="images/mole.png" alt="bear">
-            <div id="stretcher"></div>
+    <!-- Scroll Driven Animation -->
+    <section class="Scroll-Driven-Animation">
+      <h2 id="scroll-driven-animation">Scroll-driven-animation</h2>
+      <h3>Introduction of the Scroll-driven-animation</h3>
+      <p>Scroll-based animation is a common UX pattern on the web. It links the animation to the scroll position of a
+        scroll container. In other words, as you scroll up or down, the connected animations respond directly by
+        scrubbing back and forth. Effects like parallax background images or reading indicators fall under this
+        category. Scroll-animation allows CSS animations to be directly linked to the scroll position of a webpage.
+        This
+        means that as the user scrolls, the animations can start, progress, or end based on how far they have
+        scrolled.
+      </p>
+      <h3>What are animation timelines?</h3>
+      <p>Before diving into scroll-driven animations, we first need to understand what animation timelines are.
+        Historically, the only animation timeline that existed was the document timeline which will start incrementing
+        when the page loads. As long as the page remains open, the document timeline will continue to increment. We
+        can
+        observe this by logging the document.timeline variable in our console.</p>
+      <code>
+          &lt; "document.timeline" in Javascript&gt;
+        </code>
+      <p>scroll-driven animations are based on scroll progress and not time durations, the document timeline doesn’t
+        make sense when starting to think about animating elements based on scroll position. This is why scroll-driven
+        animations introduced the animation-timeline property which allows us to target two new types of animation
+        timelines that will be used to create scroll-driven animations.</p>
+      <h3>Role of Scroll-driven animation</h3>
+      <p>The Scroll-driven animation allows for defining how animations progress according to the scroll position of a
+        specific element. As users scroll down the page, the animation can start or end based on the scroll position.
+        This allows developers to create animations that play in sync with the user's scrolling behavior.</p>
+      <h3>Introduction to new types of scroll-based timelines and property</h3>
+      <ol>
+        <li><b>Scroll progress timeline:</b> You progress this timeline by scrolling a scrollable element (scroller)
+          from top
+          to bottom (or left to right) and back again. The position in the scroll range is converted into a percentage
+          of progress — 0% at the start and 100% at the end.</li><br>
+        <li><b>Animation-range:</b> The animation-range CSS shorthand property is used to set the start and end of an
+          animation's attachment range along its timeline, i.e. where along the timeline an animation will start and
+          end.</li>
+      </ol>
+      <h3>Using the Scroll-driven animation</h3>
+      <h4>Add the following code to see how Scroll() works</h4>
+        <pre>
+<code>
+#bear-image {
+  animation-name: rotateAnimation;
+  animation-timeline: scroll(block nearest);
+}
+@keyframes rotateAnimation {
+from {
+  transform: rotate(0deg);
+}
+to {
+  transform: rotate(360deg);
+   }
+}
+    </code>
+  </pre>
+      <div class="css-editor-section">
+        <textarea id="css-editor-scroll" placeholder="Type CSS here for the old animation..."></textarea>
+      </div>
+      <div class="scroll-container-1">
+        <img id="bear-image" src="images/mole.png" alt="bear">
+        <div id="stretcher"></div>
+      </div>
+      <h3>Using the Animation Range</h3>
+      <h4>Add the following CSS code for Animation range</h4>
+<pre>
+<code>
+@keyframes header {
+  from {
+  backdrop-filter: blur(0);
+  background: transparent;
+  }
+  
+  to {
+  backdrop-filter: blur(8px);
+  background: rgba(83, 117, 173, 0.75);
+  }
+}
+  
+  .scroll-nav,
+  .scroll-nav > h2 {
+    animation: header linear forwards;
+    animation-timeline: scroll();
+    animation-range: 0 80px;
+  }
+</code>
+</pre>
+      <section class="css-editor-section">
+        <textarea id="css-editor-animation-range" placeholder="Type CSS here for animation range..."></textarea>
+      </section>
+      <div class="range">
+        <div class="scroll-container-2">
+          <nav class="scroll-nav">
+            <h2>Revealed On Scroll</h2>
+          </nav>
+          <div>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio, repellat atque soluta sequi
+              quae, eaque rem facere necessitatibus vel minus quia excepturi fugit ipsam totam quas eum sed
+              accusamus ut?</p>
+            <p>Eaque nobis sequi sint magnam saepe voluptatum velit quam. Sapiente aspernatur repellendus, eius
+              adipisci, rem dolor nobis excepturi consequatur libero vitae dicta officiis sunt ratione. Nemo hic
+              ipsum aperiam aliquam? Eaque nobis sequi sint magnam saepe voluptatum velit quam. Sapiente
+              aspernatur repellendus, eius adipisci, rem dolor nobis excepturi consequatur libero vitae dicta
+              officiis sunt ratione. Nemo hic ipsum aperiam aliquam? Eaque nobis sequi sint magnam saepe
+              voluptatum velit quam. Sapiente aspernatur repellendus, eius adipisci, rem dolor nobis excepturi
+              consequatur libero vitae dicta officiis sunt ratione. Nemo hic ipsum aperiam aliquam?</p>
+            <p>Aliquam, aperiam distinctio. Facilis quia totam tempore odio natus minus assumenda iste ab error
+              consequatur, expedita iure et magnam nisi voluptas necessitatibus ipsam, maiores eligendi
+              blanditiis? Temporibus maiores voluptates blanditiis?</p>
+            <p>Sint nisi nam aut labore sequi laboriosam voluptates earum debitis, provident minima molestias fugit
+              quidem totam autem dolor! Molestias sequi beatae aut. Fugit et minus velit culpa quasi eos in!</p>
+            <p>Nesciunt mollitia doloribus quaerat ratione aliquid quae odit ut sint eaque fugit placeat at,
+              molestiae quo ullam, temporibus dolor. Officia ratione iusto quas dolorum enim eius porro voluptatum
+              veritatis accusantium!</p>
           </div>
-          <h3>Example of view()</h3>
-          <div class="scroll-driven">
-            <div class="scroll-content">
-              <h1>Content</h1>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                tempor incididunt ut labore et dolore magna aliqua. Risus quis varius quam
-                quisque id. Et ligula ullamcorper malesuada proin libero nunc consequat
-                interdum varius. Elit ullamcorper dignissim cras tincidunt lobortis feugiat
-                vivamus at augue.
-              </p>
+        </div>
+      </div>
+      </ol>
+      <h3>Benefit of Scroll-driven animation</h3>
+      <ol>
+        <li><b>Improved User Experience:</b> Scroll animations can create a more engaging and immersive experience for
+          users, as elements can animate into view based on their scroll actions.</li><br>
+        <li><b>Performance:</b> By utilizing CSS for animations rather than JavaScript, scroll animations can be more
+          performant and smooth, leading to better overall responsiveness.</li>
+      </ol>
+    </section>
 
-              <p>
-                Dolor sed viverra ipsum nunc aliquet. Sed sed risus pretium quam vulputate
-                dignissim. Tortor aliquam nulla facilisi cras. A erat nam at lectus urna
-                duis convallis convallis. Nibh ipsum consequat nisl vel pretium lectus.
-                Sagittis aliquam malesuada bibendum arcu vitae elementum. Malesuada bibendum
-                arcu vitae elementum curabitur vitae nunc sed velit.
-              </p>
-              <div class="subject-container">
-                <div class="subject animation"></div>
-              </div>
-              <p>
-                Adipiscing enim eu turpis egestas pretium aenean pharetra magna ac. Arcu
-                cursus vitae congue mauris rhoncus aenean vel. Sit amet cursus sit amet
-                dictum. Augue neque gravida in fermentum et. Gravida rutrum quisque non
-                tellus orci ac auctor augue mauris. Risus quis varius quam quisque id diam
-                vel quam elementum. Nibh praesent tristique magna sit amet purus gravida
-                quis. Duis ultricies lacus sed turpis tincidunt id aliquet. In egestas erat
-                imperdiet sed euismod nisi. Eget egestas purus viverra accumsan in nisl nisi
-                scelerisque. Netus et malesuada fames ac.
-              </p>
-              <div class="overlay top">inset start 50%</div>
-              <div class="overlay bottom">inset end 10%</div>
-            </div>
-          </div>
-          <h3>Example of animation-range</h3>
-          <div class="range">
-            <div class="scroll-container-2">
-              <nav class="scroll-nav">
-                <h2>Revealed On Scroll</h2>
-              </nav>
-              <div>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio, repellat atque soluta sequi
-                  quae, eaque rem facere necessitatibus vel minus quia excepturi fugit ipsam totam quas eum sed
-                  accusamus ut?</p>
-                <p>Eaque nobis sequi sint magnam saepe voluptatum velit quam. Sapiente aspernatur repellendus, eius
-                  adipisci, rem dolor nobis excepturi consequatur libero vitae dicta officiis sunt ratione. Nemo hic
-                  ipsum aperiam aliquam? Eaque nobis sequi sint magnam saepe voluptatum velit quam. Sapiente
-                  aspernatur repellendus, eius adipisci, rem dolor nobis excepturi consequatur libero vitae dicta
-                  officiis sunt ratione. Nemo hic ipsum aperiam aliquam? Eaque nobis sequi sint magnam saepe
-                  voluptatum velit quam. Sapiente aspernatur repellendus, eius adipisci, rem dolor nobis excepturi
-                  consequatur libero vitae dicta officiis sunt ratione. Nemo hic ipsum aperiam aliquam?</p>
-                <p>Aliquam, aperiam distinctio. Facilis quia totam tempore odio natus minus assumenda iste ab error
-                  consequatur, expedita iure et magnam nisi voluptas necessitatibus ipsam, maiores eligendi
-                  blanditiis? Temporibus maiores voluptates blanditiis?</p>
-                <p>Sint nisi nam aut labore sequi laboriosam voluptates earum debitis, provident minima molestias fugit
-                  quidem totam autem dolor! Molestias sequi beatae aut. Fugit et minus velit culpa quasi eos in!</p>
-                <p>Nesciunt mollitia doloribus quaerat ratione aliquid quae odit ut sint eaque fugit placeat at,
-                  molestiae quo ullam, temporibus dolor. Officia ratione iusto quas dolorum enim eius porro voluptatum
-                  veritatis accusantium!</p>
-              </div>
-            </div>
-          </div>
-        </ol>
-      </article>
-      <article>
-        <h2>Benefit of Scroll-driven animation</h2>
-        <ol>
-          <li><b>Improved User Experience:</b> Scroll animations can create a more engaging and immersive experience for users, as elements can animate into view based on their scroll actions.</li><br>
-          <li><b>Performance:</b> By utilizing CSS for animations rather than JavaScript, scroll animations can be more performant and smooth, leading to better overall responsiveness.</li>
-        </ol>
-      </article>
+    <!-- Conclusion -->
 
-        <!-- Conclusion -->
+    <section class="Conclusion">
+      <h2 id="conclusion">Conclusion</h2>
+      <p>
+        The future of CSS is brimming with possibilities that make web development more intuitive, efficient, and creative. Technologies like View Transitions, CSS Nesting, Motion Paths, and Scroll-Driven Animation provide developers with powerful tools to enhance user experience and streamline coding workflows.
 
-        <h2 id="conclusion">Conclusion</h2>
-        <p>
-          Nulla facilisi. Proin sodales odio et nisl maximus ultrices sit amet
-          in ex. Donec tellus lacus, eleifend ornare tristique eget, placerat
-          non nunc. Donec scelerisque nibh sed turpis dignissim tempus. Aenean
-          facilisis ut nibh at interdum. Suspendisse at risus metus. Suspendisse
-          potenti. Morbi ligula lectus, dignissim et congue in, cursus vehicula
-          tortor. Donec tincidunt a mauris quis scelerisque.
-        </p>
+        As these features continue to be adopted, they promise to transform how we think about interactivity and design on the web. By embracing these advancements, developers can create faster, more responsive websites with stunning visual effects and smooth transitions—without relying heavily on JavaScript.
+      </p>
+    </section>
+    <!-- Resources -->
 
-        <!-- Resources -->
+    <h2 id="resources">Resources</h2>
+    <section class="Credits">
+      <table>
+        <tr>
+          <th>Resource</th>
+          <th>Author</th>
+          <th>Date</th>
+          <th>Link</th>
+        </tr>
+        <tr>
+          <td>Title of Resource</td>
+          <td>Author Name</td>
+          <td>Date of Publication</td>
+          <td><a href="URL">Link</a></td>
+        </tr>
+        <tr>
+          <td>Example Resource</td>
+          <td>Placeholder Author</td>
+          <td>Random Date</td>
+          <td><a href="URL">Link</a></td>
+        </tr>
+        <tr>
+          <td>Example Resource</td>
+          <td>Placeholder Author</td>
+          <td>Random Date</td>
+          <td><a href="URL">Link</a></td>
+        </tr>
+        <tr>
+          <td>Example Resource</td>
+          <td>Placeholder Author</td>
+          <td>Random Date</td>
+          <td><a href="URL">Link</a></td>
+        </tr>
 
-        <h2 id="resources">Resources</h2>
+        <!-- Repeat <tr> blocks for each resource -->
+      </table>
+    </section>
+  </main>
+  <footer>
 
-        <table>
-          <tr>
-            <th>Resource</th>
-            <th>Author</th>
-            <th>Date</th>
-            <th>Link</th>
-          </tr>
-          <tr>
-            <td>Title of Resource</td>
-            <td>Author Name</td>
-            <td>Date of Publication</td>
-            <td><a href="URL">Link</a></td>
-          </tr>
-          <tr>
-            <td>Example Resource</td>
-            <td>Placeholder Author</td>
-            <td>Random Date</td>
-            <td><a href="URL">Link</a></td>
-          </tr>
-          <tr>
-            <td>Example Resource</td>
-            <td>Placeholder Author</td>
-            <td>Random Date</td>
-            <td><a href="URL">Link</a></td>
-          </tr>
-          <tr>
-            <td>Example Resource</td>
-            <td>Placeholder Author</td>
-            <td>Random Date</td>
-            <td><a href="URL">Link</a></td>
-          </tr>
+  </footer>
+</body>
 
-          <!-- Repeat <tr> blocks for each resource -->
-        </table>
-      </main>
-    </div>
-  </body>
 </html>
-
