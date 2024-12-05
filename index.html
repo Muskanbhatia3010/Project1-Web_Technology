@@ -84,7 +84,7 @@
       <h4>HTML:</h4>
       <pre>
   <code>
-    &lt;meta name="view-transition" content="same-origin"&gt;
+&lt;meta name="view-transition" content="same-origin"&gt;
   </code>
   </pre>
       <p>
@@ -177,23 +177,25 @@
       <p>CSS motion path is a CSS property used to animate an element along a path.</p>
       <p>Previously, only simple, linear movements were possible in CSS.</p>
       <h3>Try the following code in the editor below</h3>
-      <pre>
-  <code>
-.old {
-  width: 50px;
-  height: 50px;
-  animation: move1 infinite 1s linear;
-  }
-@keyframes move1 {
-  100% {
-  transform: translate(100px, 100px);
+<div class = "code-editor-container">
+        <pre id="code-display">
+    <code>
+  .old {
+    width: 50px;
+    height: 50px;
+    animation: move1 infinite 1s linear;
+    }
+  @keyframes move1 {
+    100% {
+    transform: translate(100px, 100px);
+     }
    }
- }
-  </code>
-        </pre>
-      <div class="css-editor-section">
-        <textarea id="css-editor-old" placeholder="Type CSS here for the old animation..."></textarea>
-      </div>
+    </code>
+          </pre>
+        <div class="css-editor-section">
+          <textarea id="css-editor-old" placeholder="Type CSS here for the old animation..."></textarea>
+        </div>
+</div>
       <!-- Old Animation Preview -->
       <div class="old-demo">
         <div class="old">

@@ -88,11 +88,12 @@ th {
 /* More styling */
 /* Leib's Styling */
 pre {
+  display: flex;
   color: #fff;
   border: 1px solid #999;
   font-family: "Courier New", Courier, monospace;
   padding: 10px;
-  white-space: pre-wrap; /* This ensures that white spaces are preserved */
+  white-space: pre; /* This ensures that white spaces are preserved */
   overflow-x: auto;
   word-wrap: break-word;
   background-color: #3a3a3a;
@@ -152,7 +153,7 @@ ol li span {
   }
   
   @media (min-width: 768px) {
-    .toggle-button {
+      .toggle-button {
       max-width: 150px;
     }
   
