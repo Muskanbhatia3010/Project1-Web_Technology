@@ -278,7 +278,7 @@ ol li span {
 }
 .code-display,
 .css-editor-section {
-  flex: 1; /* Equal height */
+  flex: 1; 
   max-width: 100%;
 }
 .code-display {
