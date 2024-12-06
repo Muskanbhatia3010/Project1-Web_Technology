@@ -226,7 +226,7 @@ ol li span {
   #code-preview-container {
     flex-direction: row;
     align-items: stretch;
-    gap: 40px;
+    gap: 20px;
   }
 
   #css-code-block,
