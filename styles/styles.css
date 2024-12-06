@@ -120,10 +120,6 @@ th {
 }
 
 @media (min-width: 50em) {
-  .container {
-    display: flex;
-    height: 100vh;
-  }
   #navigation {
     display: block;
   }
@@ -145,10 +141,7 @@ th {
 
   .scrollable-content {
     margin-left: 250px;
-    padding: 1rem;
     width: calc(100% - 250px);
-    overflow-y: auto;
-    background-color: lightgray;
   }
 }
 
