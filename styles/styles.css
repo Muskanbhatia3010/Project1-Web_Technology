@@ -22,11 +22,11 @@ a:active {
 a:hover {
   color: darkturquoise;
 }
-img {
+/* img {
   max-width: 640px;
   height: auto;
   margin: 0 auto;
-}
+} */
 
 /* Header styling */
 
@@ -68,6 +68,7 @@ p {
 /* Table styling */
 
 table {
+  margin: 0 auto;
   width: 70%; 
   border-collapse: collapse;
 }
@@ -190,16 +191,20 @@ ol li span {
   display: flex;
   overflow: hidden;
 }
-
+.svg-path img{
+  display: block;
+  margin: 0 auto;
+}
+.Credits{
+  display: block;
+  margin: 0 auto;
+}
 .old,
 .motion-path {
   width: 50px;
   height: 50px;
 }
 
-.svg-path {
-  width: 640px;
-}
 .code-editor-container {
   display: flex;
   flex-direction: column; /* Default for small screens (stacked layout) */
@@ -263,7 +268,6 @@ ol li span {
 /* Example of animation-timeline scroll() */
 .scroll-container-1 {
   margin: 0 auto;
-  width: 800px;
   height: 300px;
   overflow-y: scroll;
   position: relative;
@@ -308,7 +312,6 @@ ol li span {
 }
 
 .range {
-  width: 800px;
   height: 300px;
   --surface: hsl(200 10% 10%);
   --text: hsl(200 5% 80%);
@@ -364,10 +367,6 @@ ol li span {
   display: block;
 }
 #toggle-menu {
-  align-content: center;
-  /* align-items: center; */
-  position: fixed;
-  right: 1rem;
   padding: 1rem;
   cursor: pointer;
   background-color: #3a3a3a;
